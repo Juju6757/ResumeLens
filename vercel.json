@@ -10,5 +10,15 @@
       "routePrefix": "/_/backend",
       "framework": "express"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://resumelens-wdvi.onrender.com/api/:path*"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
 }
